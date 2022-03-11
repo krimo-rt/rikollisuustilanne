@@ -1,0 +1,85 @@
+
+# Rikollisuuden rakenne ja kehitys 
+
+## Tiivistelmä {-}
+
+ - Vuonna 2020 viranomaisten tietoon tuli 686 045 rikosta ja rikkomusta,
+joista 543 429 oli rikoslakirikoksia ja 129 549 liikenteeseen liittyviä
+rikkomuksia. Rikkomusten määrä laski 63 prosenttia, mikä johtuu pääosin
+tieliikennelain uudistuksesta, jossa eräistä liikennerikkomuksista
+seuraa sakkojen sijasta hallinnollinen seuraamus.
+
+ - Rikoslakirikokset nousivat 19 prosenttia vuoteen 2019 verrattuna.
+
+ - Henkeen ja terveyteen kohdistuneiden rikosten määrä laski noin prosentilla ja seksuaalirikosten määrä nousi kahdella prosentilla edellisvuoteen nähden. Omaisuusrikosten määrä nousi 19 prosenttia. 
+
+ - Henkirikosten määrä on ollut laskusuuntainen 90-luvulta alkaen. Vuonna 2020 viranomaisten kirjaamien henkirikosten määrä oli 86, määrä on lähellä 10-vuoden keskiarvoa. 
+
+ - Omaisuusrikokset muodostivat rikosten kokonaismäärästä hieman alle puolet ja liikennerikokset noin neljänneksen. Henkeen ja terveyteen kohdistuneet rikokset muodostivat kuusi prosenttia kaikista rikoksista.
+
+ - Varkausrikokset ovat vähentyneet lähes yhtäjaksoisesti 1990-luvun puolesta välistä lähtien. Vuosi 2020 on kuitenkin ollut poikkeus laskevassa trendissä. Rikosten määrä kasvoi kymmenen prosenttia.  Pahoinpitelyrikokset lisääntyivät 2010-luvulle asti, mutta taso on viime vuosina vakiintunut.
+
+Rikollisuuden rakennetta ja kehitystä tarkastellaan seuraavassa viranomaisten tilastoiman rikollisuuden pohjalta. Pääosa rikoksista on poliisin tilastoimaa. Myös Tulli ja Rajavartiolaitos kirjaavat rikoksia.  
+
+Vuonna 2020 poliisin, Tullin ja rajavartiolaitoksen tietoon tuli 686 045 rikosta ja rikkomusta, joista rikoslakirikoksia oli 543 429 (taulukko 1). Liikennerikkomuksia kirjattiin 129 549 ja muita rikoksia ja rikkomuksia 556 496. Omaisuusrikokset muodostivat rikosten ja rikkomusten (pl. liikennerikkomukset) kokonaismäärästä vajaa puolet (46 %), pelkästään varkausrikokset neljänneksen (25 %). Henkeen ja terveyteen kohdistuneet rikokset ja seksuaalirikokset muodostivat yhteensä seitsemän prosenttia kaikista rikoksista ja rikkomuksista. Valtaosan tästä muodostivat pahoinpitelyrikokset, joiden osuus rikoksista ja rikkomuksista oli kuusi prosenttia. Liikennerikokset muodostivat rikoksista ja rikkomuksista noin viidenneksen (24 %), joista rattijuopumukset muodostivat yli kuudesosan. Muita mainittavia rikosryhmiä olivat huumausainerikokset (7 %), rikokset oikeudenkäyttöä, viranomaisia ja yleistä järjestystä vastaan (2 %) sekä yksityisyyden, rauhan ja kunnian loukkaamiset (6 %). 
+
+Niin liikennerikosten määrä kuin rikoslakirikosten määrä nousivat molemmat noin 20 prosenttia edellisvuoteen nähden. Varkausrikosten määrä nousi kymmen prosenttia, pahoinpitelyrikokset taas laskivat noin kaksi prosenttia. Seksuaalirikosten määrä on ollut noususuuntainen jo usean vuoden ajan. Vuonna 2020 seksuaalirikosten määrä nousi kaksi prosenttia edellisvuoteen verrattuna.
+
+Eri rikoslajien kehitys riippuu paitsi rikollisuuden todellisesta lisääntymisestä tai vähenemisestä, myös siitä, miten aktiivisesti rikosten uhriksi joutuneet ilmoittavat niistä poliisille. Poliisilta piiloon jäävien rikosten osuus on usein suurempi niin sanotuissa massarikoksissa kun taas vakavammat rikokset tulevat herkemmin poliisin tietoon. Ilmitulleiden rikosten määrään vaikuttaa myös viranomaisten valvonnan tehokkuus ja se, miten valvontaa suunnataan. Tilastoituun rikollisuuteen vaikuttavat lisäksi lainsäädännön muutokset ja rikosten kirjaamisessa tapahtuneet muutokset. 
+
+Kuvio 1 näyttää kaikkien rikoslakirikosten sekä varkausrikosten ja pahoinpitelyrikosten kehityksen viimeisen 30 vuoden aikana. Vertailun helpottamiseksi kaikkien rikosten ja varkausrikosten määrä esitetään väestön 10 000 asukasta kohden, pahoinpitelyrikokset väestön 100 000 asukasta kohden. Taulukossa 2 esitetään myös eräiden muiden rikosten väkilukuun suhteutettu määrä viimeisen kymmenen vuoden aikana. 
+
+
+```{r, include = FALSE}
+library(readxl)
+library(tidyverse)
+library(plotly)
+```
+
+```{r, echo=FALSE}
+data1 <- read_excel("/Users/Ilari/Documents/R/RT2020/kuvat/Kuvio_1.xlsx",sheet=1)
+
+data1_2 <- data1 %>% 
+  pivot_longer(
+    cols = !starts_with("rikokset"), 
+    names_to = "vuosi", 
+    values_to = "arvot"
+  )
+
+  kuvio34 <- ggplot(data1_2, aes(vuosi, arvot, colour=rikokset, group = rikokset)) + geom_line() + geom_point() + 
+   labs(y= "Rikoksia suhteessa väestöön")  +
+    scale_x_discrete(labels = NULL, breaks = NULL) + labs(x = "")
+    
+
+ggplotly(kuvio34)
+
+```
+
+Kaikkien rikosten kokonaismäärä on ollut pääosin laskusuuntainen vuoden 1990 jälkeen. Vuonna 1990 rikosten määrä oli 1 150 rikosta väestön 10 000 asukasta kohti, kun taso vuonna 2020 oli 982.  Myös varkausrikokset ovat yleisesti vähentynyt vuodesta 1993 lähtien. Vuonna 2020 Varkausrikosten väestöön suhteutettu taso on vähentynyt vuoden 1993 tasosta yli 30 prosenttia, vaikka vuonna 2020 tehtiin jopa 10% enemmän varkausrikoksia kuin 2019.
+
+Varkausrikosten ohella myös vahingontekorikokset ovat viimeisen kymmenen vuoden aikana vähentyneet. Kavallus- ja petosrikokset sen sijaan lisääntyivät vuoteen 2016 asti, jonka jälkeen rikollisuuden taso on osin laskenut ja pysynyt ennallaan. Ryöstörikosten määrä on pysynyt jotakuinkin samalla tasolla koko tarkastelujakson ajan. Vuonna 2020 ryöstörikosten taso oli kuitenkin tarkastelujakson korkein, 33 rikosta 100 000 asukasta kohden.
+
+Pahoinpitelyrikosten määrä lisääntyi lähes yhtäjaksoisesti vuoteen 2011 asti. Kasvun katsotaan johtuneen ainakin osittain alkoholin kulutuksen samanaikaisesta kasvusta, osin myös lisääntyneellä ilmoitusalttiudella sekä rikosten tilastointiin liittyvillä seikoilla. Vuonna 2011 poliisin kirjaamat pahoinpitelyt lisääntyivät huomattavan paljon. Tätä selittää lainmuutos, jonka myötä lähisuhteissa tapahtuneista lievistä pahoinpitelyistä tuli yleisen syytteen alaisia. Viime vuosina pahoinpitelyrikollisuuden taso on pysynyt käytännössä muuttumattomana. Henkirikollisuus sen sijaan on vähentynyt lähes yhtäjaksoisesti jo 90-luvulta lähtien.
+
+```{r, echo=FALSE}
+data2 <- read_excel("/Users/Ilari/Documents/R/RT2020/kuvat/taulukko_1.xlsx",sheet=1)
+
+
+knitr::kable(
+  head(data2[, 1:8], 10), booktabs = TRUE,
+  caption = 'Taulukko 2 Poliisin tietoon tulleet rikokset väestön 100 000 asukasta kohti 2010–2020'
+)
+
+```
+## Lähteet {-}
+
+Tilastokeskus. 2021a. Rikos- ja pakkokeinotilasto. Helsinki: Tilastokeskus. 
+	https://stat.fi/til/rpk/
+	
+Tilastokeskus. 2021b. Väestörakenne. Helsinki: Tilastokeskus. 
+	https://www.stat.fi/til/vaerak
+	
+Tilastokeskus. 2020. Rikos-ja pakkokeinotilasto Viranomaisten tietoon tullut rikollisuus 2020. Tilastokeskus.  https://www.stat.fi/til/rpk/2020/13/rpk_2020_13_2021-05-12_fi.pdf
+
+Haapakangas, Kimmo. (2020). Yksi rikos, monta osatekoa – miten rikoksia tilastoidaan? Tilastokeskus. https://www.stat.fi/tietotrendit/blogit/2021/yksi-rikos-monta-osatekoa-miten-rikoksia-tilastoidaan/. 
+

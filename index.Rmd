@@ -1,0 +1,56 @@
+--- 
+title: "Rikollisuustilanne 2020"
+author: "Ilari Kolttola (toim.)"
+date: "`r Sys.Date()`"
+description: Rikollisuustilanne 2020
+documentclass: book
+github-repo: rstudio/bookdown-demo
+link-citations: yes
+site: bookdown::bookdown_site
+bibliography:
+- book.bib
+- packages.bib
+---
+
+# {-}
+
+![kansikuva](/Users/Ilari/Documents/R/RT2020/kuvat/RT_kansi.jpg)
+
+## Esipuhe {-}
+
+Helsingin yliopiston Kriminologian ja oikeuspolitiikan instituutin (Krimo) lakisääteisiin tehtäviin kuuluu rikollisuustilanteen ja rangaistusten seuranta. Vuonna 1975 aloitettu Rikollisuustilanne-katsausten sarja ilmentää tätä tehtävää. Käsillä oleva katsaus käsittelee rikollisuuden kehitystä; seuraamusjärjestelmän toiminnasta julkaistaan erillinen katsaus. 
+
+Rikollisuustilanne-katsauksen lukujen rakennetta ja tietosisältöä on viime vuosina yhdenmukaistettu. Julkaisussa korostuvat rikoslajikohtaisen tarkastelun ohella tutkimuksellisesti ja yhteiskunnallisesti ajankohtaiset teemat, jotka voivat vaihtua vuosittain. 
+	
+Vuoden 2020 osalta koronapandemia ja siihen liittyneiden rajoitustoimien rikollisuusvaikutukset ovat luonteva ajankohtaisteema. Katsaus ei korvaa pandemian kriminologista perustutkimusta. Toisaalta rajoitustoimien vaikutukset väestön rutiinitoimintoihin olivat niin mittavat, että niillä on kriminologisen teorian – ja tutkimuksenkin – valossa vaikutuksia eräisiin rikoslajeihin. Siksi tässä katsauksessa on kautta linjan tuotu tulkinnoissa esiin mahdollisia rajoitustoimien vaikutuksia ja lisätty erityinen koronavaikutuksia tarkasteleva luku, joka kuvaa vuotta 2020 viikkotasolla. Muutoin katsauksen tietosisältö vastaa pitkälti aiempia julkaisuja. 
+	
+Käsillä oleva Rikollisuustilanne-katsaus on usean kirjoittajan ja tekijän yhteistyön tulos. Suuren työn on tehnyt teoksen toimittaja Ilari Kolttola, jolle tehtävä siirtyi edellisen toimittajan Petri Danielssonin siirryttyä muihin tehtäviin. Koronavaikutuksia tarkastelevan luvun kuviot on laatinut Nino Lindström. Katsauksen taitosta ja graafisesta ulkoasusta on huolehtinut Eira Mykkänen.
+
+
+
+
+## Johdanto {-}
+
+Rikollisuustilanne-julkaisun tarkoituksena on antaa kokonaiskuva suomalaisen rikollisuuden tasosta, rakenteesta ja kehityslinjoista. Julkaisussa pureudutaan eri rikoslajien ominaispiirteisiin ja ajankohtaisiin ilmiöihin hyödyntämällä erilaisia tietolähteitä. Tarkastelun kohteena on laajasti erilaisia rikostyyppejä, mukaan lukien keskeiset omaisuus- ja väkivaltarikokset, mutta myös ajankohtaisia rikostyyppejä, kuten kyberrikollisuus. Lisäksi julkaisussa tarkastellaan säännöllisesti erilaisia ajankohtaisia rikollisuuteen liittyviä teemoja. Käsillä olevassa Rikollisuustilanne 2020 -julkaisussa erityisteemoina on ulkomaalaisten ja maahanmuuttajien rikollisuus, nuorisorikollisuus sekä rikollisuus ja koronapandemia.  
+Koronapandemia teki vuodesta 2020 poikkeuksellisen myös rikollisuustilanteen osalta. Tämä näkyy useissa julkaisun luvuissa. Katsauksen rakenne perustuu vuoden 2020 tarkasteluun yhtenä jaksona; siten koronatoimien vaikutukset tulevat esiin yhtenä mahdollisena tasoon vaikuttaneena tekijänä. Lisäksi katsaukseen on lisätty koronapandemiaa tarkasteleva erillinen luku (B.3). Se porautuu tarkemmin juuri vuoden 2020 aikana tapahtuneisiin muutoksiin, ottaen huomioon poikkeusolot ja rajoitustoimien vaihtelun. Kappaleessa aihetta lähestytään pahoinpitelyrikosten ja varkaus- ja vahingontekorikosten kautta. 
+
+Rikollisuuden kokonaiskuvaa muodostettaessa on ensiarvoinen tärkeää hyödyntää laajasti erilaisia tietolähteitä. Rikollisuustilanne-julkaisussa hyödynnetään tietolähteenä sekä viranomaislähteitä että kyselytutkimuksia. Viranomaislähteet ovat pääosin luonteeltaan rekisteritietoja, jotka syntyvät osana viranomaisten toimintaa ja käytänteitä. Pääasiallisena lähteenä on Tilastokeskuksen rikos- ja pakkokeinotilasto, joka kattaa poliisin, Tullin ja Rajavartiolaitoksen kirjaamat rikosepäilyt. Tietoja, jotka on kirjattu viranomaisten rekistereihin, kutsutaan ilmirikollisuudeksi. Viranomaislähteiden ongelmana on kuitenkin se, että kaikki rikollisuus ei syystä tai toisesta tule viranomaisten tietoon. Rikollisuutta, joka jää viranomaisten rekistereiden ulkopuolelle, kutsutaan puolestaan piilorikollisuudeksi. Toisaalta viranomaislähteiden ongelmana on myös se, että lainsäädännöllisillä muutoksilla ja viranomaiskontrollin suuntautumisella voi olla vaikutuksia viranomaisten kirjaamien rikosten määrään, vaikka rikosten tosiasiallisessa määrässä ei olisi tapahtunut olennaisia muutoksia. 
+
+Rikollisuuden kokonaiskuvan muodostamisessa voidaan viranomaislähteiden lisäksi hyödyntää myös erilaisiin kyselymenetelmiin pohjautuvia tietolähteitä. Kyselymenetelmiin pohjautuvilla tutkimuksilla voidaan tarkastella kokonaisrikollisuutta, siis sekä piiloon jäävää että ilmi tulevaa rikollisuutta, ja niiden perusteella voidaan arvioida myös piiloon jäävän rikollisuuden osuutta kokonaisrikollisuudesta. Kyselyt mahdollistavat myös sellaisten rikollisuuteen liittyvien ilmiöiden kartoittamisen, joista on lähes mahdotonta saada tietoa viranomaislähteistä. Tällainen ilmiö on esimerkiksi rikollisuuden pelko. Tässä julkaisussa hyödynnettäviä kyselylähteitä ovat esimerkiksi Kansallinen rikosuhritutkimus, Nuorisorikollisuuskysely sekä Yritysuhritutkimus. Ne kaikki ovat laajaan, kansallisesti edustavaan otokseen perustuvia kyselytutkimuksia, joiden perusteella voidaan luotettavasti arvioida sekä aikuisväestön että nuorten kokeman rikollisuuden yleisyyttä ja piirteitä, mutta myös yrityksiin kohdistuvan rikollisuuden tasoa. On kuitenkin huomattava, että myös kyselymenetelmien tuottamassa tiedossa on katvealueita, esimerkiksi törkeimmät rikokset ja harvinaiset rikokset sekä syrjäytyneeseen väestönosaan yhdistyvät rikokset. Siten kyselymenetelmä täydentää, muttei korvaa, rekisterilähteitä rikollisuuden kuvaamisessa ja tutkimuksessa.
+
+
+```{r eval=FALSE}
+bookdown::render_book()
+```
+
+```{r, eval=FALSE}
+bookdown::serve_book()
+```
+
+
+```{r, include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
